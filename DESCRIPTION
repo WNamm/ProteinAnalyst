@@ -1,0 +1,19 @@
+Package: ProteinAnalyst
+Title: Analyze Amino Acid Content of Protein Sequences
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "William",
+           family = "Namm",
+           role = c("aut", "cre"),
+           email = "WNamm7@gmail.com",
+           comment = "")
+Description: This package analyzes protein sequences imported as fasta files.
+    Different functions can count types or categories of amino acids.
+    The data can be returned as data frames or made into graphs.
+Depends: R (>= 4.0.3)
+Imports: ggplot2
+License: CC0
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
