@@ -3,4 +3,6 @@
 export(count.aa.categ)
 export(count.aa.type)
 export(get.seq)
+export(graph.aa.categ)
+export(graph.aa.type)
 export(protein.length)

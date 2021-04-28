@@ -4,16 +4,19 @@
 \alias{count.aa.categ}
 \title{Count Amino Acid Categories}
 \usage{
-count.aa.categ(file)
+count.aa.categ(file, df = FALSE)
 }
 \arguments{
 \item{file}{A file connection. This should be a fasta-format text file of the desired protein.}
+
+\item{df}{By default, this argument is set to FALSE, and a list is returned.  If set to TRUE, then a data frame is returned instead.}
 }
 \value{
-A list of 5 integers, each representing the total number of amino acids within a broad category that the protein contains.
+If df=FALSE: a list of 5 integers, each representing the total number of amino acids within a broad category that the protein contains.
+If df=TRUE: a data frame with 5 rows, each containing the total number of amino acids within a broad category that the protein contains.
 }
 \description{
-This function takes a fasta file and creates a list that has the total number of amino acids in each category.
+This function takes a fasta file and creates a list or data frame that has the total number of amino acids in each category.
 }
 \details{
 This function divides the 20 amino acids into 5 categories: Hydrophobic, Hydrophilic, Ambiguous, Acidic, and Basic.  The Ambiguous category contains cysteine and tyrosine; different sources disagree on whether these amino acids are hydrophobic or hydrophilic.

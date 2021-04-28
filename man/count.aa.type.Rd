@@ -4,17 +4,22 @@
 \alias{count.aa.type}
 \title{Count Amino Acid Types}
 \usage{
-count.aa.type(file)
+count.aa.type(file, df = FALSE)
 }
 \arguments{
 \item{file}{A file connection. This should be a fasta-format text file of the desired protein.}
+
+\item{df}{By default, this argument is set to FALSE, and a list is returned.  If set to TRUE, then a data frame is returned instead.}
 }
 \value{
-A list of 20 integers, each representing the total number of an amino acid type in the protein.
+If df=FALSE: a list of 20 integers, each representing the total number of an amino acid type in the protein.
+If df=TRUE: a data frame with 20 rows, each containing the total number of an amino acid type in the protein.
 }
 \description{
-This function creates a list that contains the number of each type of amino acid that can be found in a provided fasta file.
+This function creates a list or data frame that contains the number of each type of amino acid that can be found in a provided fasta file.
 }
 \details{
-The returned list contains the amino acid one-letter codes as the keys, and the matching integers are the total number of that amino acid.  For example, the element "G=16" indicates that the protein has 16 glycines.
+If a list is returned, it contains the amino acid one-letter codes as the keys, and the matching integers are the total number of that amino acid.
+For example, the element "G=16" indicates that the protein has 16 glycines.
+If a data frame is returned, then the amino acid one-letter codes are all in the "Amino.Acid" column, with the matching amounts in the "Amount" column.
 }

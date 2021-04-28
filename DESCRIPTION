@@ -9,7 +9,7 @@ Authors@R:
            comment = "")
 Description: This package analyzes protein sequences imported as fasta files.
     Different functions can count types or categories of amino acids.
-    The data can be returned as lists or made into graphs.
+    The data can be returned as lists or data frames, or made into graphs.
 Depends: R (>= 4.0.3)
 Imports: stringr, ggplot2
 License: CC0
