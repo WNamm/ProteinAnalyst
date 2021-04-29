@@ -1,4 +1,4 @@
-#' @title Count Amino Acid Categories
+#' @title Count Amino Acids by Category
 #'
 #' @description This function takes a fasta file and creates a list or data frame that has the total number of amino acids in each category.
 #'
@@ -9,9 +9,10 @@
 #' If df=TRUE: a data frame with 5 rows, each containing the total number of amino acids within a broad category that the protein contains.
 #' @export
 #'
-#' @details This function divides the 20 amino acids into 5 categories: Hydrophobic, Hydrophilic, Ambiguous, Acidic, and Basic.  The Ambiguous category contains cysteine and tyrosine; different sources disagree on whether these amino acids are hydrophobic or hydrophilic.
-count.aa.categ <- function(file, df=FALSE) {
-  types <- count.aa.type(file)
+#' @details This function divides the 20 amino acids into 5 categories: Hydrophobic, Hydrophilic, Ambiguous, Acidic, and Basic.
+#' The Ambiguous category contains cysteine and tyrosine; different sources disagree on whether these amino acids are hydrophobic or hydrophilic.
+count.aa.by.categ <- function(file, df=FALSE) {
+  types <- count.aa(file)
   categories <- list(Hydrophobic=0, Hydrophilic=0, Ambiguous=0, Acidic=0, Basic=0)
   categories$Hydrophobic <- types$G + types$A + types$V + types$L + types$I + types$P + types$M + types$F + types$W
   categories$Hydrophilic <- types$S + types$T + types$N + types$Q

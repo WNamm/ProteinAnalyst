@@ -4,9 +4,9 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-ProteinAnalyst contains several functions that can be used to analyze the amino acid content of protein sequences.  These functions can count the types of amino acids, sort them into categories, and display this information as lists, data frames, or bar graphs.
+ProteinAnalyst contains several functions that can be used to analyze the amino acid content of protein sequences.  These functions can count the amino acids by all 20 types, sort them into broader categories, and display this information as lists, data frames, or bar graphs.
 
-All of the functions utilize the fasta file format for inputs.  These can be found on the UniProt database.
+All of the functions utilize the fasta file format for inputs.  These can be found on the UniProt database, and then copied and pasted into a text file.
 
 ## Installation
 
@@ -14,6 +14,17 @@ You can install the latest version of ProteinAnalyst from [GitHub](https://githu
 
 ``` r
 install_github("WNamm/ProteinAnalyst")
+```
+
+## Required External Packages
+
+Some functions in ProteinAnalyst require the external packages stringr and ggplot2.  You can install and load them with these commands:
+
+``` r
+install.packages("stringr")
+install.packages("ggplot2")
+library(stringr)
+library(ggplot2)
 ```
 
 ## External Package Citations
